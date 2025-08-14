@@ -5,7 +5,7 @@
 	"version": "1.0.0",
 	"title": "Mp Pricing Table",
 	"category": "widgets",
-	"icon": "media-interactive",
+	"icon": "editor-table",
 	"description": "Pricing table.",
 	"example": {},
 	"attributes": {
