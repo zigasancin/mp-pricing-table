@@ -1,0 +1,113 @@
+.mp-pricing-table {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	color: #1A3060;
+	font-size: 18px;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+.mp-pricing-table > * {
+	width: calc(100% / 3 );
+	padding: 1rem;
+
+	@media screen and (max-width: 767px) {
+		width: 100%;
+	}
+}
+
+.mp-pricing-table > *:nth-child(1) {
+	@media screen and (max-width: 1023px) {
+		order: 2;
+	}
+
+	@media screen and (min-width: 767px) and (max-width: 1023px) {
+		width: calc(85.3% /2);
+	}
+}
+
+.mp-pricing-table > *:nth-child(2) {
+	@media screen and (max-width: 1023px) {
+		order: -1;
+	}
+
+	@media screen and (min-width: 767px) and (max-width: 1023px) {
+		width: 100%;
+	}
+}
+
+.mp-pricing-table > *:nth-child(3) {
+	@media screen and (max-width: 767px) {
+		order: 3;
+	}
+
+	@media screen and (min-width: 767px) and (max-width: 1023px) {
+		width: calc(85.3% /2);
+	}
+}
+
+.mp-pricing-table-block {
+	border: 3px solid #D9E4FD;
+	border-radius: 5px;
+	box-shadow: 0px 2px 4px -2px #0000001A;
+	box-shadow: 0px 4px 6px -1px #0000001A;
+	cursor: pointer;
+}
+
+.mp-pricing-table-block:focus {
+	border: 3px solid #009344;
+	transition: all 0.5s ease-out;
+	transform: scale(1.06);
+	animation: 0.5s showScale;
+	outline: none;
+
+	.mp-pricing-table-cta_text a {
+		background-color: #009344;
+		color: #FFFFFF;
+		transition: all 0.5s ease-out;
+
+		&:focus-visible {
+			outline: none;
+		}
+	}
+}
+
+.mp-pricing-table-cta_text a {
+	border: 3px solid #009344;
+	border-radius: 5px;
+	padding: 10px;
+	display: block;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+
+	&:hover {
+		background-color: #009344;
+		color: #FFFFFF;
+		transition: all 0.5s ease-out;
+	}
+}
+
+.mp-pricing-table-plan {
+	font-size: 26px;
+}
+
+@keyframes showScale {
+	from {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(1.06);
+	}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	.mp-pricing-table-cta_text a,
+	.mp-pricing-table-cta_text a:hover {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+	}
+}
