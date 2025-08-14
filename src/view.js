@@ -1,3 +1,6 @@
+/**
+ * Frontend script
+ */
 ( () => {
 	document.addEventListener( 'DOMContentLoaded', () => {
 		const pricingTableBlocksLinks = document.querySelectorAll( '.mp-pricing-table-block a' );
