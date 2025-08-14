@@ -16,7 +16,7 @@ Insert the MP Pricing Table block in WP Admin like any other block by selecting 
 
 == Assumptions ==
 
-The pricing table is wrapped as a flexbox in WP Admin as well as on frontend (the default WordPress block grid component is still experimental). The default tier count is 2 as defined under attributes in block.json.
+The pricing table is wrapped as a flexbox in WP Admin and as a grid on frontend (the default WordPress block grid component is still experimental). The default tier count is 2 as defined under attributes in block.json.
 
 == Considerations ==
 

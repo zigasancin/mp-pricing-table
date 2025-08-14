@@ -1,6 +1,11 @@
+<?php
+/**
+ * Outputs our pricing table.
+ */
+?>
 <section class="mp-pricing-table">
-	<?php for ( $i = 0; $i < $attributes['tiers']; $i++ ) : ?>
-		<div class="mp-pricing-table-block" tabindex="-1">
+	<?php for ( $i = 0; $i < (int) $attributes['tiers']; $i++ ) : ?>
+		<div class="mp-pricing-table-block<?php echo 1 === $i ? ' premium' : ''; ?>" tabindex="-1">
 			<?php
 			echo '<div class="mp-pricing-table-plan">' . esc_html( $attributes['plan' . $i ] ) . '</div>';
 			echo '<p>' . esc_html( $attributes['price' . $i ] ) . '</p>';
